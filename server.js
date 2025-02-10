@@ -33,12 +33,8 @@ app.get("/", async (req, res) => {
   res.render("index.ejs");
 });
 
-app.post("/users", async (req, res) => {
-  await User.create({
-    username: "harry",
-    password: "123",
-  });
-  res.send("created");
+app.post("/sign-up", async (req, res) => {
+  res.send("Form submission accepted!");
 });
 
 app.listen(port, () => {
